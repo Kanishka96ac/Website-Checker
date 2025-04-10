@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Website URL Checker</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container text-center">
+      <h1 class="mb-4">🔒 Website URL Checker</h1>
+
+      <form method="POST" id="url-form">
+        <div class="input-group mb-3 url-input mx-auto">
+          <input
+            type="text"
+            name="url"
+            class="form-control"
+            placeholder="Enter website URL..."
+            required
+            id="url-input"
+            value="{{ url if url else '' }}"
+          />
+          <button class="btn btn-primary" type="submit">
+            <i class="fas fa-search"></i> Check
+          </button>
+          <a class="btn reset-btn" href="{{ url_for('index') }}?reset=true">
+            <i class="fas fa-rotate-left"></i>
+          </a>
+        </div>
+      </form>
+
+      {% if url %}
+      <div class="alert alert-info mt-4">
+        <strong
+          >This website uses <strong>{{ protocol }}</strong> ({{ result
+          }}).</strong
+        >
+      </div>
+      {% endif %}
+    </div>
+
+    <script>
+      // Function to reset form and result
+      function resetForm() {
+        document.getElementById("url-form").reset();
+        document.querySelector(".alert")?.remove(); // Remove the result alert
+      }
+    </script>
+  </body>
+</html>
