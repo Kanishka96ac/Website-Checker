@@ -4,7 +4,7 @@ A simple Flask-based web application to check if a website is secure or not by a
 
 ## 📸 Demo
 
-![App Screenshot](website_checker.png)
+![App Screenshot](website_checker.jpg)
 
 ## 🚀 Features
 
@@ -30,6 +30,7 @@ A simple Flask-based web application to check if a website is secure or not by a
 1. **Clone the repository**
 
    git clone https://github.com/Kanishka96ac/Website-Checker.git
+
    cd Website-Checker
 
 2. **Install dependencies**
