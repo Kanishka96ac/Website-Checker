@@ -51,14 +51,8 @@ A simple Flask-based web application to check if a website is secure or not by a
 
 ## 📁 Project Structure
 
-├── app.py
-├── .env
-├── requirements.txt
-├── templates
-│ └── index.html
-├── static
-│ └── css
-│ └── styles.css
+![image](https://github.com/user-attachments/assets/6644cd0b-1ba4-4963-b5d5-31ba628e145b)
+
 
 ## 👨‍💻 Author
 
